@@ -1,3 +1,6 @@
+
+const moment = require("moment/moment");
+
 describe('Air Malta Test', () => {
 
     it('Air Malta Test', () => {
@@ -18,7 +21,7 @@ describe('Air Malta Test', () => {
         cy.get('.airport-name').click();
         
         cy.get('.startDate > .form-control').click();
-        cy.get('[aria-label="Wed Jan 25 2023"] > .date-picker-day-cell > .calendar-day').click();
+        cy.get('[aria-label="'+moment().add(2,'days').format('ddd MMM DD YYYY')+'"] > .date-picker-day-cell > .calendar-day').click();
          
         cy.get('.buttons > .d-none').click();
          
@@ -30,3 +33,5 @@ describe('Air Malta Test', () => {
             .screenshot();                                       // Screenshot
     })
 })
+
+
