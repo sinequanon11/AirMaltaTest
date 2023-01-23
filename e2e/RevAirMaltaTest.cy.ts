@@ -1,8 +1,8 @@
 
-const moment = require("moment/moment");
-
 describe('Air Malta Test', () => {
-
+    
+const moment = require("moment/moment");
+    
     it('Air Malta Test', () => {
 
         cy.visit("https://airmalta.com/");
